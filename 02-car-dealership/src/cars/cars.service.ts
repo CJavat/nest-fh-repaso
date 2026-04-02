@@ -77,4 +77,8 @@ export class CarsService {
       message: 'Eliminado',
     };
   }
+
+  fillCarsWithSeedData(cars: Car[]) {
+    this.cars = cars;
+  }
 }
