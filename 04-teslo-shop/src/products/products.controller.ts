@@ -10,11 +10,13 @@ import {
   ParseUUIDPipe,
 } from '@nestjs/common';
 import { ProductsService } from './products.service';
+import { Auth } from 'src/auth/decorators';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
 import { PaginationDto } from 'src/common/dtos/pagination.dto';
 
 @Controller('products')
+@Auth()
 export class ProductsController {
   constructor(private readonly productsService: ProductsService) {}
 
